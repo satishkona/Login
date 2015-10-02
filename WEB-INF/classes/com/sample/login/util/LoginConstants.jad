@@ -1,0 +1,18 @@
+// Decompiled by DJ v3.4.4.74 Copyright 2003 Atanas Neshkov  Date: 7/16/2010 12:12:50 PM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   LoginConstants.java
+
+package com.sample.login.util;
+
+
+public interface LoginConstants
+{
+
+    public static final String USERNAME = "userName";
+    public static final String PASSWORD = "passWord";
+    public static final String INPUT_USERNAME = "sample";
+    public static final String INPUT_PASSWORD = "sample23";
+    public static final String SUCCESS = "success";
+    public static final String FAILURE = "failure";
+}

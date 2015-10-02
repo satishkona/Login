@@ -1,0 +1,125 @@
+/****************************************
+ FileStructure of basic.css (v1.0)
+*****************************************
+
+    1.0 Browser Reset
+    2.0 Basics
+    3.0 Forms (general)
+    4.0 Header
+    5.0 Content
+
+*****************************************
+
+    Colors:
+
+    blue #003399
+    grey #646464 (headline)
+    grey #7b7b7b (copy text)
+
+*****************************************/
+
+/* 1.0 Browser Reset */
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td { margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; }
+body { line-height:1; }
+ol, ul { list-style:none; }
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; content:none; }
+:focus { outline:0; }
+ins {text-decoration:none; }
+del {text-decoration:line-through; }
+table {border-collapse:collapse; border-spacing:0; }
+
+
+/* 2.0 Basics */
+body { margin:0; padding:0; font-family: Arial, Helvetica, sans-serif; font-size:11px; line-height:1.2; color:#7b7b7b; background:#fff url(../images/bg_body.png) repeat-x 0 0; text-align:left; }
+  * html { overflow:hidden; }
+a { color:#003399; text-decoration:none; }
+a:hover { text-decoration:underline; }
+p { margin:0 0 16px; }
+h4 { margin:0 0 10px; color:#003399; }
+.errclass { margin:0 0 10px; color:#003399; }
+
+/* 3.0 Forms (general) */
+#content legend { display:none; }
+#content input { border:none; }
+#content .row { clear:both; padding:0 0 10px; }
+#content .col { float:left; width:350px; overflow:hidden;}
+#content .auto {  width:auto; }
+#content label { display:block; float:left; margin-right:10px; width:200px; font-weight:normal; line-height:2; color:#7b7b7b;  }
+#content .data label { line-height:normal; }
+#content label.small { width:120px; }
+#content label.auto { margin-bottom:10px; }
+#content label.block { margin-bottom:10px; width:100%; }
+#content .input, #content .select { padding:0px 2px; border:1px solid #d3deee;color:#000000; font-family:Arial,Helvetica,sans-serif; font-size:12px; height:17px; line-height:normal; }
+#content .select { height:auto; width:500px; }
+
+/* 4.0 Header */
+#header { position:relative; margin:35px 0 0 20px; height:70px;}
+#header #logo { position:absolute; right:0; top:0; width:156px; height:28px; background:url(../images/logo.png) no-repeat 0 0;}
+#header #logo span { display: none; }
+#header #client { position:absolute; right:0; bottom:4px; text-align:left; }
+#header h2{ padding-top:7px; font-size:22px; color:#003399; }
+
+/* 5.0 Content */
+#container { width:976px; margin:0 auto; padding:0; overflow:hidden; }
+#content { clear:both; position:relative; margin:0; padding:0; width:976px; height:500px; overflow:hidden; font-size:12px; }
+a.button, #content input.button { margin:0; padding:1px 21px 1px 11px; border:1px solid #d2d2d2 !important; background:#fbfbfb url(../images/bg_button.png) no-repeat 100% 0; color:#003399; font-size:11px; line-height:normal; text-decoration:none !important; cursor:pointer; }
+a.button { margin-left:5px; }
+  * html a.button{ line-height:20px; background-position:100% 1px;}
+  *+html a.button{ line-height:20px; background-position:100% 1px;}
+a.disabled, #content input.disabled { background-color:#fafbfd !important; background-position:100% -32px; color:#aaa !important; }
+  * html #buttons a.disabled { background-position:100% -30px; }
+  *+html #buttons a.disabled { background-position:100% -30px; }
+
+/* 5.1 Content - Data page */
+#content #overview { margin:45px 0 0 20px; padding:20px 20px 0; background:#fff; border:1px solid #d1dded; color:#000; }
+#content #overview fieldset { position:relative; padding:0 0 20px; }
+  * html #content #overview fieldset { padding:0 0 15px; width:900px; overflow:hidden; }
+  *+html #content #overview fieldset { padding:0 0 15px; }
+#content #overview .button { position:absolute; right:0; bottom:10px; }
+  * html #content #overview #button_search { bottom:23px; }
+  * html #content #overview #button_reload { bottom:33px; }
+
+/* 5.2 Content - Login page */
+body.login #container { background:url("../images/bg_login.jpg") no-repeat 0 105px; } /* container with background visual */
+body.login #login { position:absolute; left:520px; top:315px; width:460px; }
+body.login #login label { width:100px; color:#003399; }
+body.login #login input.input { width:142px; }
+body.login #login input.input_disabled { width:142px;border:1px solid #d3deee;color:#000000;font-family:Arial,Helvetica,sans-serif; font-size:12px; height:17px; line-height:normal;background-color:#fafbfd !important; background-position:100% -32px; color:#aaa !important; }
+body.login #login .submit_row { padding:10px 0 20px 135px; }
+body.login #login .submit_row input.button { width:120px; border:1px solid #ddd !important; }
+
+/* 6.0 Buttons */
+#buttons{ margin-bottom:8px; padding-top:5px;text-align:right; width:976px; height:20px; overflow:hidden; }
+  * html #buttons{ height:25px; }
+
+/* 7.0 Footer */
+#footer {clear:both; float:left; display:inline; padding:8px 0 0 0; width:976px; border-top:1px solid #d6d6d6; }
+#footer a { float:right; font-size:11px; line-height:normal; }
+body.login #footer {clear:both; float:right; display:inline; padding:8px 0 0 0; width:460px; border-top:1px solid #d6d6d6; }
+/* 8.0 Overlay */
+#overlay { display:none; position:absolute;left:0;top:0;background:#fff;width:100%;height:98%;z-index:2; opacity:0.5;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";filter:alpha(opacity=50); }
+  * html #overlay {width:1200px;height:750px; }
+#overlay1 { display:none; position:absolute;left:0;top:0;background:#fff;width:100%;height:98%;z-index:2; opacity:0.5;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";filter:alpha(opacity=50); }
+  * html #overlay1 {width:1200px;height:750px; }
+#dialog_container { display:none; position:absolute; left:50%; top:160px; margin-left:-205px; width:410px; height:219px; z-index:3; }
+#dialog_container1 { display:none; position:absolute; left:50%; top:160px; margin-left:-205px; width:410px; height:219px; z-index:3; }
+#dialog { background:transparent url(../images/bg_dialog.png) no-repeat 0 0; width:100%; height:100%; z-index:3; font-size:12px; }
+#dialog1 { background:transparent url(../images/bg_dialog.png) no-repeat 0 0; width:100%; height:100%; z-index:3; font-size:12px; }
+#dialog .wrapper { padding:33px; }
+#dialog1 .wrapper { padding:33px; }
+#dialog #button_close { position:absolute; right:33px; bottom:33px; background-position:100% 3px;}
+#dialog1 #button_close1 { position:absolute; right:33px; bottom:33px; background-position:100% 3px;}
+body.show_dialog #overlay, body.show_dialog #dialog_container { display:block; } 
+body.show_dialog1 #overlay, body.show_dialog1 #dialog_container1 { display:block; } /* Add class 'show_dialog' to show dialog box and overlay */
+  * html body.show_dialog select { !important; } 
+  * html body.show_dialog1 select { !important; }/* Fix IE6: always rendering select boxes on top of page elements */

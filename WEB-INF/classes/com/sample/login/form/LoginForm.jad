@@ -1,0 +1,93 @@
+// Decompiled by DJ v3.4.4.74 Copyright 2003 Atanas Neshkov  Date: 7/16/2010 12:13:01 PM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   LoginForm.java
+
+package com.sample.login.form;
+
+import java.io.PrintStream;
+import javax.servlet.http.HttpServletRequest;
+import org.apache.struts.action.*;
+
+public class LoginForm extends ActionForm
+{
+
+    public LoginForm()
+    {
+    }
+
+    public String getInformation()
+    {
+        return information;
+    }
+
+    public void setInformation(String information)
+    {
+        this.information = information;
+    }
+
+    public String getPassWord()
+    {
+        return passWord;
+    }
+
+    public void setPassWord(String passWord)
+    {
+        this.passWord = passWord;
+    }
+
+    public String getUserName()
+    {
+        return userName;
+    }
+
+    public void setUserName(String userName)
+    {
+        this.userName = userName;
+    }
+
+    public ActionErrors validate(ActionMapping mapping, HttpServletRequest request)
+    {
+        ActionErrors actionErrors = new ActionErrors();
+        String userName = request.getParameter("userName");
+        String passWord = request.getParameter("passWord");
+        if(userName == null || userName.equals(""))
+            actionErrors.add("userName", new ActionMessage("error.userName.required"));
+        else
+        if(userName.length() < 6)
+            actionErrors.add("userName", new ActionMessage("error.userName.length"));
+        else
+        if(passWord == null || passWord.equals(""))
+            actionErrors.add("passWord", new ActionMessage("error.passWord.required"));
+        else
+        if(passWord.length() < 8)
+            actionErrors.add("passWord", new ActionMessage("error.passWord.length"));
+        else
+        if(!userName.equals("sample") || !passWord.equals("sample23"))
+            actionErrors.add("passWord", new ActionMessage("error.passWord.username"));
+        return actionErrors;
+    }
+
+    public void reset()
+    {
+        System.out.println("reset called");
+        userName = "";
+        passWord = "";
+    }
+
+    public String getLogin()
+    {
+        return login;
+    }
+
+    public void setLogin(String login)
+    {
+        this.login = login;
+    }
+
+    private static final long serialVersionUID = 1L;
+    private String userName;
+    private String passWord;
+    private String information;
+    private String login;
+}

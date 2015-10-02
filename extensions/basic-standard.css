@@ -1,0 +1,68 @@
+/*************login ***************/
+
+#logincontainermain {
+	margin: 0 auto;
+	width: 800px;
+	height: 500px;
+	text-align: left;
+	font-size: 1em;
+	line-height: 1.5em;
+	background:#fff url(../images/bg_body.png); 
+}
+
+
+#logincontent { 
+	clear:both; 
+	position:relative; 
+	margin:0; padding:0; 
+	margin-top:30em;
+	margin-left:42.0em;
+	height:200px; 
+	overflow:hidden; 
+	font-size:12px; 
+}
+
+#logincontainer { 
+	width:976px; 
+	margin:0 auto; 
+	padding:0; 
+	overflow:hidden; 
+	background:url(../images/bg_login.jpg) no-repeat 0 0px;
+}
+
+
+
+
+#headerlogin{ 
+	background:#FFFFFF none repeat scroll 0 0;
+	float:left;
+	margin-top:2em;
+}
+
+
+#headerlogin { position:relative; margin:35px 0 0 20px; height:70px;}
+#headerlogin #logologin { position:absolute; margin:0px 0 0 800px; width:156px; height:28px; background:url(../images/logo.png) no-repeat 0 0;}
+#headerlogin #logologin span { display: none; }
+#headerlogin h2{ position:relative; padding-top:7px; font-size:22px; color:#003399;  }
+
+
+/* 3.0 Forms (general) */
+#logincontent legend { display:none; }
+#logincontent input { border:none; height:17px;}
+#logincontent input.input_disabled { width:142px;padding:0px 2px;border:1px solid #d3deee;color:#000000;font-family:Arial,Helvetica,sans-serif; font-size:12px; height:17px; line-height:normal;background-color:#fafbfd !important; background-position:100% -32px; color:#aaa !important; }
+#logincontent .row { clear:both; padding:0 0 10px; }
+#logincontent .col { float:left; width:350px; overflow:hidden;}
+#logincontent .auto {  width:auto; }
+#logincontent label {  display:block; float:left; margin-right:10px; width:100px; font-weight:normal; line-height:2;   color:#003399; }
+#logincontent .data label { line-height:normal; }
+#logincontent label.small { width:120px; }
+#logincontent label.auto { margin-bottom:10px; }
+#logincontent label.block { margin-bottom:10px; width:100%; }
+#logincontent .input, #logincontent .select { width:142px;padding:0px 2px; border:1px solid #d3deee;color:#000000; font-family:Arial,Helvetica,sans-serif; font-size:12px; height:15px; line-height:normal; }
+#logincontent .submit_row { padding:10px 0 20px 135px; }
+#logincontent .buttonlogin { 
+	margin:0; padding:1px 21px 1px 11px;
+	width:120px; border:1px solid #ddd !important;
+	font-family:Arial,Helvetica,sans-serif;font-weight:normal;
+	background:#fbfbfb url(../images/bg_button.png) no-repeat 100% 0; color:#003399; font-size:12px;  
+}
