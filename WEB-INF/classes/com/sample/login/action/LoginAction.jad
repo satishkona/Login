@@ -1,0 +1,42 @@
+// Decompiled by DJ v3.4.4.74 Copyright 2003 Atanas Neshkov  Date: 7/16/2010 12:12:21 PM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   LoginAction.java
+
+package com.sample.login.action;
+
+import com.sample.login.form.LoginForm;
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import org.apache.struts.action.*;
+
+public class LoginAction extends Action
+{
+
+    public LoginAction()
+    {
+    }
+
+    public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response)
+        throws IOException, ServletException
+    {
+        LoginForm loginForm = (LoginForm)form;
+        String userName = request.getParameter("userName");
+        String passWord = request.getParameter("passWord");
+        loginForm.setUserName(userName);
+        loginForm.setPassWord(passWord);
+        String forwardPath = null;
+        if(userName != null && passWord != null)
+            if(userName.equals("sample") && passWord.equals("sample23"))
+            {
+                forwardPath = "success";
+            } else
+            {
+                forwardPath = "failure";
+                loginForm.reset();
+            }
+        return mapping.findForward(forwardPath);
+    }
+}
